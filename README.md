@@ -1,3 +1,0 @@
-# kodonokami.io
-
-aaaa
