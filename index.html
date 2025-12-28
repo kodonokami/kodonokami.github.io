@@ -1,8 +1,120 @@
-<html>
+<!DOCTYPE html>
+<html lang="pt-br">
 <head>
-  <title>seila</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cantinho do kodonokami</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Orbitron', sans-serif;
+      background: #0f0f0f;
+      color: #00ffe7;
+    }
+
+    /* Importa uma fonte futurista */
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+
+    header {
+      background: linear-gradient(90deg, #0ff 0%, #00f 100%);
+      padding: 40px 0;
+      text-align: center;
+      color: #000;
+      font-size: 2.5em;
+      text-shadow: 0 0 10px #0ff, 0 0 20px #0ff;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #1a1a1a;
+      box-shadow: 0 0 10px #0ff;
+    }
+
+    nav a {
+      color: #00ffe7;
+      text-decoration: none;
+      padding: 15px 30px;
+      display: inline-block;
+      transition: 0.3s;
+      font-size: 1.2em;
+    }
+
+    nav a:hover {
+      background-color: #00ffe7;
+      color: #0f0f0f;
+      box-shadow: 0 0 10px #00ffe7, 0 0 20px #00ffe7;
+    }
+
+    main {
+      padding: 40px;
+      text-align: center;
+    }
+
+    .glow {
+      color: #00ffe7;
+      text-shadow: 0 0 5px #00ffe7, 0 0 10px #00ffe7, 0 0 20px #00ffe7;
+    }
+  </style>
+  
+  <script>
+	function kodo_mudar(id){
+		mtodos = document.getElementsByClassName("menus");
+		pagina = document.getElementById(id);
+		
+		menu_cont = 0;
+		while(menu_cont < mtodos.length){
+			console.log(menu_cont);
+			mtodos[menu_cont].hidden = true;			
+			menu_cont += 1;
+		}
+		pagina.hidden = false;
+		
+	}
+  </script>
 </head>
-  <body>
-    testando
-  </body>
+<body>
+  <header>
+    <div class="glow">KODO NO KAMI</div>
+  </header>
+
+  <nav>
+    <a onclick="kodo_mudar('menu_inicio')">Inicio</a>
+    <a onclick="kodo_mudar('menu_social')">Social</a>
+    <a onclick="kodo_mudar('menu_videos')">Vídeos</a>
+    <a onclick="kodo_mudar('menu_sobre')">Sobre</a>
+  </nav>
+
+  <main>
+	<div class="menus" id="menu_inicio">
+		<h2 class="glow">Cantinho do kodonokami</h2>
+		<p>em construção</p>
+	</div>
+	
+	<div class="menus" id="menu_social" hidden>
+		<h2 class="glow">social</h2>
+		<p>
+		<iframe width="560" height="315"
+  src="https://www.youtube.com/watch?v=Amy3IAAmvOk&list=PLd6f4Rq_8l99jbEUrVXcng9H3Yaq17tDK"
+  title="Playlist do YouTube"
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  allowfullscreen>
+</iframe>
+
+		
+		</p>
+	</div>
+	
+	<div class="menus" id="menu_videos" hidden>
+		<h2 class="glow">videos</h2>
+		<p></p>
+	</div>
+	
+	<div class="menus" id="menu_sobre" hidden>
+		<h2 class="glow">sobre</h2>
+		<p>alguma coisa</p>
+	</div>
+  </main>
+</body>
 </html>
